@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     #My Apps
     'mongo_django_app',
+    'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [

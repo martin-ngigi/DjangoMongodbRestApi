@@ -79,3 +79,33 @@ exception. To use one of the built-in backends, use 'django.db.backends.XXX', wh
 Make migrations:
     python manage.py makemigrations 
     python manage.py migrate
+
+CRUD OPERATIONS
+1. Install django-rest-framework by running:
+    pip install django-rest-framework
+2. Add the module 'rest_framework" in installed apps in settings.py.
+3. Now, we will create new app inside django project by typing this command:
+    cd .\mongo_django_project\
+    python manage.py startapp api
+4. Add the apps inside settings.py > installed apps. 'api'
+5. Create urls.py file inside api folder and include that urls.py file in your django project root urls.
+
+
+
+CRUD OPERATIONS:
+First makesure server is running by typing:
+    python manage.py runserver
+
+POST-> Create or insert afresh:
+ in postman, select GET
+ then paste : http://127.0.0.1:8000/mydrinks/drinks as your endpoint.
+ then in the body select row, then select in the text, select JSON
+ and paste the following:
+      {
+        "id": 1,
+        "name": "Fanta",
+        "description": "Fanta Oriange drink."
+      }
+Then click post
+
+
