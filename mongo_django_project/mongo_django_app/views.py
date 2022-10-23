@@ -41,3 +41,53 @@ def drink_list(request, format=None):
         if serializer.is_valid():
             serializer.save() #save valid data
             return Response(serializer.data, status = status.HTTP_201_CREATED)
+
+# #Either fetch, update delete
+@api_view(['GET', 'PUT', 'DELETE'])
+def drink_details(request, id, format=None): #id is from urls.py
+    try:
+        drink=Drink.objects.get(pk=id)
+    except Drink.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    # Fecth
+    if request.method == 'GET':
+        serializer = DrinkSerializer(drink)
+        return Response(serializer.data)
+
+    #Update
+    elif request.method == 'PUT':
+        serializer = DrinkSerializer(drink, data=request.data)
+        #if serializer is valid, the save
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        #else, show error message
+        return Response(serializer.errors, status=status.HTTP_404_BAD_REQUEST)
+    
+    #Delete
+    elif request.method == 'DELETE':
+        drink.delete()
+        return Response(status = status.HTTP_204_NO_CONTENT)
+
+# @api_view(['GET', 'PUT', 'DELETE'])
+# def drink_details(request, id, format=None): #id is frpm urls.py
+#     try:
+#         drink = Drink.objects.get(pk=id)
+#     except Drink.DoesNotExist:
+#         return Response(status=status.HTTP_404_NOT_FOUND)
+
+#     if request.method == 'GET':
+#         serializer = DrinkSerializer(drink)
+#         return Response(serializer.data)
+#     elif request.method == 'PUT':
+#         serializer = DrinkSerializer(drink, data=request.data)
+#         # if serializer is_valid save data
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data)
+#         #else show error message
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#     elif request.method == 'DELETE':
+#         drink.delete()
+#         return Response(status=status.HTTP_204_NO_CONTENT)

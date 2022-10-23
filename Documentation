@@ -97,15 +97,36 @@ First makesure server is running by typing:
     python manage.py runserver
 
 POST-> Create or insert afresh:
- in postman, select GET
- then paste : http://127.0.0.1:8000/mydrinks/drinks as your endpoint.
- then in the body select row, then select in the text, select JSON
- and paste the following:
-      {
-        "id": 1,
-        "name": "Fanta",
-        "description": "Fanta Oriange drink."
-      }
-Then click post
+    in postman, select POST
+    then paste : http://127.0.0.1:8000/mydrinks/drinks/ as your endpoint.
+    then in the body select row, then select in the text, select JSON
+    and paste the following:
+        {
+            "id": 1,
+            "name": "Fanta",
+            "description": "Fanta Oriange drink."
+        }
+    Then click POST
+
+GET -> Retrieve all data 
+    then paste : http://127.0.0.1:8000/mydrinks/drinks/ as your endpoint.
+    Then select GET
+
+GET - > Retreive one data item by id
+    paste http://127.0.0.1:8000/mydrinks/drinks/2/ as endpoint
+
+PUT -> Update one by ID
+    paste http://127.0.0.1:8000/mydrinks/drinks/2/ as end point then GET
+    paste the following in the body after selecting raw and in the text select json ... then paste
+        {
+            "id": 2,
+            "name": "Stoney1",
+            "description": "Ginger stoney drink."
+        }
+
+    Then click PUT
+
+DELETE -> 
+    http://127.0.0.1:8000/mydrinks/drinks/3/ as endpoint, Then click delete
 
 
