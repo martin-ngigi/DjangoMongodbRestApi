@@ -63,3 +63,19 @@ Create collection in mongodb named : smart-immunization-collection
 
 Create a user name: wainaina
 Add password : 1234
+
+
+ERRORS TO EXPECT:
+1. django.core.exceptions.ImproperlyConfigured: 'djongo' isn't an available database backend or couldn't be imported. Check the above 
+exception. To use one of the built-in backends, use 'django.db.backends.XXX', where XXX is one of:
+    'mysql', 'oracle', 'postgresql', 'sqlite3'
+
+1.1 To solve above error :
+    pip install pytz
+
+
+
+
+Make migrations:
+    python manage.py makemigrations 
+    python manage.py migrate
