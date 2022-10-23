@@ -76,12 +76,30 @@ WSGI_APPLICATION = 'mongo_django_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+#db: dgjango-mongodb-rest-api-db
+#collection: dgjango-mongodb-rest-api-collection
+#mongodb data access username: wainaina
+#mongodb data access password: 1234
+
+# Mongo db
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'default': {
+            'ENGINE': 'djongo',
+            'NAME': 'dgjango-mongodb-rest-api-db',
+            'CLIENT': {
+                'host': 'mongodb+srv://wainaina:1234@cluster0.dcztjre.mongodb.net/dgjango-mongodb-rest-api-db?serverSelectionTryOnce=false&serverSelectionTimeoutMS=150000&w=majority'
+            }  
+        }
 }
+
+
 
 
 # Password validation
