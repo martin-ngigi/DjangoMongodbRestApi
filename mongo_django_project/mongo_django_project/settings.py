@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'mongo_django_app',
     'rest_framework',
     'api',
+    'reviews',
 ]
 
 MIDDLEWARE = [
