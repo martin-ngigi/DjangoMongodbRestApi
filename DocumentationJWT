@@ -1,0 +1,15 @@
+NEW TUTORIAL:
+OVERAL LINK: https://medium.com/django-rest/django-rest-framework-b3028b3f0b9
+
+PART 1
+$ pip install django
+$ pip install djangorestframework
+$ pip install markdown
+
+1. Settings and Creating Models
+Link. https://medium.com/django-rest/lets-build-a-basic-product-review-backend-with-drf-part-1-652dd9b95485
+
+NB: replace project "medium" with mongo_django_project
+
+create app:
+python manage.py startapp reviews
