@@ -13,3 +13,18 @@ NB: replace project "medium" with mongo_django_project
 
 create app:
 python manage.py startapp reviews
+
+
+2. Admin Site Customization — Django
+Build a Product Review Backend with DRF — Part 2
+
+In order to use the Django admin first, we need to create superuser using the following command:
+    python manage.py createsuperuser
+
+Then enter the following:
+    Username (leave blank to use ‘info’): admin
+    Email address: admin@gmail.com
+    Password: 1234
+
+Runserver and navigate to http://localhost:8000/admin  . You should see login page:
+    python manage.py runserver
