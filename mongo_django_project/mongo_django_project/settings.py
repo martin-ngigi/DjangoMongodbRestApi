@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-+oy#qtn0iy@pe4*uaa33)3v$+l2931oq2=1v#%@s$c$$sqny=j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+
+# allow all hosts
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -42,6 +45,7 @@ INSTALLED_APPS = [
     'mongo_django_app',
     'rest_framework',
     'api',
+    'accounts',
 ]
 
 MIDDLEWARE = [

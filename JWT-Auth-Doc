@@ -1,0 +1,14 @@
+Links:
+    # Youtube: https://www.youtube.com/watch?v=Dc0blFip6B8
+    # djangorestframework-simplejwt: https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html
+    # tutorial github : https://github.com/jod35/Building-APIS-with-DRF
+    # OVERAL YOUTUBE LINK TO WATCH : https://www.youtube.com/watch?v=Sjv-HTLmnB4
+
+    1. https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html
+    2. https://www.youtube.com/watch?v=5ws4RDEw91Q
+Intall :
+    pip install djangorestframework-simplejwt
+
+
+To write all installed app and libs:
+    pip freeze > requirements.txt

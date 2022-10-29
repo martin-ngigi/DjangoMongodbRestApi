@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include("api.urls")),
     path("mydrinks/", include("mongo_django_app.urls")),
+    path("accounts/", include("accounts.urls")),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

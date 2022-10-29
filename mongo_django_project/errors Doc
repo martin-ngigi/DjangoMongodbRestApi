@@ -1,0 +1,6 @@
+1.ERROR:  AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+
+SOLUTION: try chcking the models are correct and all the input fields are matching and there are no nulls in json object.
+
+
+
