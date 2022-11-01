@@ -298,6 +298,175 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "3.1 Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"designation\": \"Software Engineer\",\r\n    \"emp_id\": 128,\r\n    \"gender\": \"M\",\r\n    \"name\": \"Martin Wainaina\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/employees/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.2 Create Tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"created_date\": \"2021-01-21T09:42:39.792788Z\",\r\n    \"deadline\": \"2021-01-25T00:00:00Z\",\r\n    \"employee\": 1,\r\n    \"task_desc\": \"Write a Python program to interchange first and last element in a list\",\r\n    \"task_name\": \"Interchange first and last elements in a list\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/task/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.3Get Nested Employee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"designation\": \"Software Engineer\",\r\n    \"emp_id\": 128,\r\n    \"gender\": \"M\",\r\n    \"name\": \"Mathew A\",\r\n    \"pk\": 8,\r\n    \"tasks\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/employees/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.4.Get Tasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"designation\": \"Software Engineer\",\r\n    \"emp_id\": 128,\r\n    \"gender\": \"M\",\r\n    \"name\": \"Mathew A\",\r\n    \"pk\": 8,\r\n    \"tasks\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/task/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.3Get One Nested Employee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"designation\": \"Software Engineer\",\r\n    \"emp_id\": 128,\r\n    \"gender\": \"M\",\r\n    \"name\": \"Mathew A\",\r\n    \"pk\": 8,\r\n    \"tasks\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/employees/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

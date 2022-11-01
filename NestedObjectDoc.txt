@@ -1,0 +1,78 @@
+1. POST -> Employee -> http://127.0.0.1:8000/employees/
+
+{
+    "designation": "Software Engineer 2",
+    "emp_id": 120,
+    "gender": "M",
+    "name": "Martin Wainaina 2"
+}
+
+2. POST Tasks -> http://127.0.0.1:8000/task/
+
+{
+    "created_date": "2021-01-21T09:42:39.792788Z",
+    "deadline": "2021-01-25T00:00:00Z",
+    "employee": 2,
+    "task_desc": "Write a Python program to interchange first and last element in a list",
+    "task_name": "Interchange first and last elements in a list"
+}
+
+Get Nested employees: -> http://127.0.0.1:8000/employees/
+
+Reponse :
+[
+    {
+        "id": 2,
+        "tasks": [
+            {
+                "pk": 1,
+                "task_name": "Interchange first and last elements in a list",
+                "employee": 2,
+                "task_desc": "Write a Python program to interchange first and last element in a list",
+                "created_date": "2022-11-01T11:36:11.476000Z",
+                "deadline": "2021-01-25T00:00:00Z"
+            }
+        ],
+        "emp_id": 120,
+        "name": "Martin Wainaina 2",
+        "gender": "M",
+        "designation": "Software Engineer 2"
+    },
+    {
+        "id": 1,
+        "tasks": [],
+        "emp_id": 128,
+        "name": "Martin Wainaina",
+        "gender": "M",
+        "designation": "Software Engineer"
+    }
+]
+
+GET  Tasks -> 
+http://127.0.0.1:8000/task/
+
+
+GET one employee by id
+http://127.0.0.1:8000/employees/1/
+
+
+Response :
+{
+    "id": 1,
+    "tasks": [
+        {
+            "pk": 2,
+            "task_name": "Interchange first and last elements in a list",
+            "employee": 1,
+            "task_desc": "Write a Python program to interchange first and last element in a list",
+            "created_date": "2022-11-01T11:43:18.721000Z",
+            "deadline": "2021-01-25T00:00:00Z"
+        }
+    ],
+    "emp_id": 128,
+    "name": "Martin Wainaina",
+    "gender": "M",
+    "designation": "Software Engineer"
+}
+
+
