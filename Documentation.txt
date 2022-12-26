@@ -48,7 +48,16 @@ navigate to mongo_django_project by typing:
 3.1 In the VS Code Terminal with your virtual environment activated, run the administrative utility's startapp command in your project folder (where manage.py resides):
     python manage.py startapp mongo_django_app
 
+CREATING SUPERUSER:
+python manage.py createsuperuser
+
 4. INSTALLATIONS
+Export all requirements using one command:
+pip freeze -r requirements.txt
+
+Install all requirements using one command:
+pip install -r requirements.txt
+
 Instructions
 --------------
 1. pip install django
@@ -57,6 +66,7 @@ Instructions
 4. pip install dnspython
 5. pip install pymongo==3.12.3
 
+DJANGO DB:
 EMAIL IS: profwainaina
 Create database in mongodb named  : smart-immunization-db
 Create collection in mongodb named : smart-immunization-collection

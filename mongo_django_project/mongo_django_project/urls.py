@@ -18,12 +18,18 @@ from django.urls import path, include
 from mongo_django_app import views
 from rest_framework.urlpatterns import format_suffix_patterns
 
+from rest_framework_simplejwt import views as jwt_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include("api.urls")),
     path("mydrinks/", include("mongo_django_app.urls")),
     path("accounts/", include("accounts.urls")),
     path('', include('employees.urls')),
+
+    path('auth/token/',jwt_views.TokenObtainPairView.as_view(),name ='token_obtain_pair'),
+    path('auth/token/refresh/',jwt_views.TokenRefreshView.as_view(),name ='token_refresh'),
+    path('auth/', include('jwt_authentication.urls')),
 
 ]
 

@@ -1,0 +1,9 @@
+Link: https://www.geeksforgeeks.org/jwt-authentication-with-django-rest-framework/
+
+1.SETTING-UP
+Install :
+pip install djangorestframework_simplejwt
+
+POST
+
+
